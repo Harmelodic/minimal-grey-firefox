@@ -2,6 +2,7 @@
 	"manifest_version": 2,
 	"version": "1.0",
 	"name": "Minimal Grey",
+	"description": "A minimalist, grey Firefox theme",
 	"theme": {
 		"images": {},
 		"properties": {},
