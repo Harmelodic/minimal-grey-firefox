@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"version": "1.0",
+	"name": "Minimal Grey",
+	"theme": {
+		"images": {},
+		"properties": {},
+		"colors": {
+			"toolbar": "rgb(235, 235, 235)",
+			"toolbar_text": "rgb(0, 0, 0)",
+			"frame": "rgb(78, 78, 78)",
+			"tab_background_text": "rgb(200, 200, 200)",
+			"toolbar_field": "rgb(235, 235, 235)",
+			"toolbar_field_text": "rgb(0, 0, 0)",
+			"tab_line": "rgb(235, 235, 235)",
+			"popup": "rgb(255, 255, 255)",
+			"popup_text": "rgb(0, 0, 0)",
+			"tab_loading": "rgb(235, 235, 235)"
+		}
+	}
+}
