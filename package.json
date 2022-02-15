@@ -4,7 +4,7 @@
 	"description": "A minimalist, grey Firefox theme",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "rm -f *.zip && cd src && zip -r ../$npm_package_name.$npm_package_version.zip ."
+		"build": "rm -f *.zip && zip -r $npm_package_name.$npm_package_version.zip src"
 	},
 	"keywords": [
 		"Chrome",
@@ -16,10 +16,10 @@
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@gitlab.com/Harmelodic/minimal-grey-firefox.git"
+		"url": "git+ssh://git@github.com/Harmelodic/minimal-grey-firefox.git"
 	},
 	"bugs": {
-		"url": "https://gitlab.com/Harmelodic/minimal-grey-firefox/issues"
+		"url": "https://github.com/Harmelodic/minimal-grey-firefox/issues"
 	},
-	"homepage": "https://gitlab.com/Harmelodic/minimal-grey-firefox#readme"
+	"homepage": "https://github.com/Harmelodic/minimal-grey-firefox#readme"
 }
