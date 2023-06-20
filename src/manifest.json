@@ -5,7 +5,7 @@
 	"description": "A minimalist, grey Firefox theme",
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "minimal-grey@harmelodic.com"
+			"id": "{0cb2ea52-7413-431a-876b-45d0ab47697d}"
 		}
 	},
 	"theme": {
