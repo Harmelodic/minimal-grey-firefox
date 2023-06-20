@@ -14,9 +14,9 @@ jobs:
       - run: sudo apt install -y jq
       - id: manifest-version
         run: echo "version=$(jq -r '.version' src/manifest.json)" >> "$GITHUB_OUTPUT"
-      - run: cd src
-      - run: zip -r "../minimal-grey-firefox.${{ steps.manifest-version.outputs.version }}.zip" *
-      - run: cd ..
+      - run: |
+          cd src
+          zip -r "../minimal-grey-firefox.${{ steps.manifest-version.outputs.version }}.zip" *
       - run: |
           git config user.name "GitHub Actions"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
