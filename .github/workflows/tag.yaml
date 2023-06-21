@@ -1,0 +1,41 @@
+name: tag
+
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: git config user.name "GitHub Actions"
+      - run: git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - run: |
+          cd src
+          zip -r "minimal-grey-firefox.${{ github.ref_name }}.zip" .
+      - uses: actions/github-script@v6
+        env:
+          MANIFEST_VERSION: ${{ github.ref_name }}
+        with:
+          script: |
+            const fs = require('fs').promises;
+            
+            const filePath = `minimal-grey-firefox.${process.env.MANIFEST_VERSION}.zip`
+            
+            const release = await github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: process.env.MANIFEST_VERSION,
+              name: process.env.MANIFEST_VERSION
+            })
+            
+            github.rest.repos.uploadReleaseAsset({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: release.data.id,
+              name: filePath,
+              data: await fs.readFile(filePath),
+            });

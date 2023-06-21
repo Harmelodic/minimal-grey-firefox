@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: sudo apt install -y jq
-      - run: manifest_version=$(jq -r '.version' src/manifest.json)
-      - run: zip -r "minimal-grey-chrome.$manifest_version.zip" src
+      - run: |
+          cd src
+          zip -r "minimal-grey-firefox.pull-request.zip" .
