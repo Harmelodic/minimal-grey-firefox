@@ -16,7 +16,7 @@ jobs:
       - run: |
           cd src
           zip -r "minimal-grey-firefox.${{ github.ref_name }}.zip" .
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         env:
           MANIFEST_VERSION: ${{ github.ref_name }}
         with:
