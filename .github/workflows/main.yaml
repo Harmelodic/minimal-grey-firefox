@@ -11,6 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          cd src
-          zip -r "minimal-grey-firefox.main.zip" .
+      - working-directory: src
+        run: zip -r "minimal-grey-firefox.main.zip" .
