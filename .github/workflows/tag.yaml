@@ -9,7 +9,7 @@ on:
 
 jobs:
   release-browser-extension:
-    uses: harmelodic/workflows/.github/workflows/release-browser-extension.yaml@ece675d12b64965d519c70a338205c84ea1dc7e0
+    uses: harmelodic/workflows/.github/workflows/release-browser-extension.yaml@995c45b66c0fb3662edbb0b52839e2971f9072fc
     with:
       extension-name: minimal-grey-firefox
       release-version: ${{ github.ref_name }}
