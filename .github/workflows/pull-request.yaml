@@ -11,9 +11,8 @@ jobs:
   verify-github-workflows:
     uses: harmelodic/workflows/.github/workflows/verify-github-workflows.yaml@d8c3ce35546b8b035d333149dea72ab3fac2ab83
 
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - working-directory: src
-        run: zip -r "minimal-grey-firefox.pull-request.zip" .
+  build-browser-extension:
+    uses: harmelodic/workflows/.github/workflows/build-browser-extension.yaml@f4e30f59f915e57676015f1c829f3a0ffff03c72
+    with:
+      extension-name: minimal-grey-firefox
+      release-version: ${{ github.sha }}
