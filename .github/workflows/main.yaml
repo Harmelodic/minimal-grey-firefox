@@ -9,10 +9,10 @@ on:
 
 jobs:
   verify-github-workflows:
-    uses: harmelodic/workflows/.github/workflows/verify-github-workflows.yaml@dceba6193b3801e8342b1a5a6563300c0f7e437e
+    uses: harmelodic/workflows/.github/workflows/verify-github-workflows.yaml@9c9425790780e8e5a34289a409f080f2b413affd
 
   build-browser-extension:
-    uses: harmelodic/workflows/.github/workflows/build-browser-extension.yaml@dceba6193b3801e8342b1a5a6563300c0f7e437e
+    uses: harmelodic/workflows/.github/workflows/build-browser-extension.yaml@9c9425790780e8e5a34289a409f080f2b413affd
     with:
       extension-name: minimal-grey-firefox
       release-version: ${{ github.sha }}
